@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './modules/@core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastService, AngularToastifyModule } from 'angular-toastify';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   providers: [ToastService],
@@ -16,6 +17,7 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     AppStoreModule,
     AppRoutingModule,
     AngularToastifyModule,
+    BrowserAnimationsModule,
   ],
 })
 export class AppModule {}

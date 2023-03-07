@@ -1,14 +1,26 @@
-<form id="login">
+<form id="login" #loginForm="ngForm" (ngSubmit)="handleSubmit()">
   <div>
     <label for="email">e-mail</label>
-    <input type="email" id="email" name="email" />
+    <input
+      required
+      id="email"
+      type="email"
+      name="email"
+      [(ngModel)]="authentication.email"
+    />
   </div>
 
   <div>
     <label for="password">Senha</label>
-    <input type="password" id="password" name="password" />
+    <input
+      required
+      id="password"
+      type="password"
+      name="password"
+      [(ngModel)]="authentication.password"
+    />
   </div>
 
-  <button>Entrar</button>
+  <button type="submit" [disabled]="loginForm.form.invalid">Entrar</button>
   <a routerLink="/authentication/register">Cadastre-se</a>
 </form>

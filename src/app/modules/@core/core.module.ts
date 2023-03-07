@@ -8,10 +8,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+const SHARED_IMPORTS = [FormsModule, CommonModule];
 @NgModule({
-  imports: [FormsModule, CommonModule],
+  imports: [...SHARED_IMPORTS],
   providers: [...services, ...helpers],
-  exports: [...components, ...pages, ...directives],
   declarations: [...components, ...pages, ...directives],
+  exports: [...SHARED_IMPORTS, ...components, ...pages, ...directives],
 })
 export class CoreModule {}

@@ -1,24 +1,33 @@
-<form id="register">
+<form id="register" #registerForm="ngForm" (ngSubmit)="handleSubmit()">
   <div>
     <label for="name">Nome</label>
-    <input type="text" id="name" name="name" />
+    <input required type="text" id="name" name="name" [(ngModel)]="user.name" />
   </div>
 
   <div>
     <label for="email">e-mail</label>
-    <input type="email" id="email" name="email" />
+    <input
+      required
+      id="email"
+      type="email"
+      name="email"
+      [(ngModel)]="user.email"
+    />
   </div>
 
   <div>
     <label for="name">Senha</label>
-    <input type="password" id="password" name="password" />
+    <input
+      required
+      id="password"
+      type="password"
+      name="password"
+      [(ngModel)]="user.password"
+    />
   </div>
 
-  <div>
-    <label for="password-confirm">Confirmação de senha</label>
-    <input type="password" id="password-confirm" name="password-confirm" />
-  </div>
-
-  <button>Criar Conta</button>
+  <button type="submit" [disabled]="registerForm.form.invalid">
+    Criar Conta
+  </button>
   <a routerLink="/authentication/login">Voltar para login</a>
 </form>
