@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@import "base";
+@import "~animate.css/animate.min.css";
+
+body {
+  color: $text;
+  background: $bg-primary;
+  font-family: "Poppins", sans-serif;
+
+  @apply text-base m-0 overflow-x-hidden;
+}
+
+* {
+  transition: all;
+  scroll-behavior: smooth;
+  @extend .scrollbar-primary;
+}
+
+a {
+  @apply cursor-pointer;
+}

@@ -1,0 +1,51 @@
+.btn-shadow {
+  filter: drop-shadow(0px 4px 4px #00000040);
+}
+
+.btn {
+  @apply h-auto min-w-[110px] rounded-full;
+  padding: 0.4rem 0.8rem !important;
+
+  &:disabled {
+    @apply opacity-80 cursor-not-allowed;
+  }
+}
+
+.btn-primary {
+  @extend .btn;
+  @extend .btn-shadow;
+
+  color: $bg-primary;
+  background: $secondary;
+}
+
+.btn-secondary {
+  @extend .btn;
+  @extend .btn-shadow;
+
+  color: $bg-primary;
+  background: $primary;
+}
+
+.btn-light {
+  @extend .btn;
+  @extend .btn-shadow;
+
+  color: $primary;
+  background: $bg-secondary;
+}
+
+.btn-light-secondary {
+  @extend .btn;
+  @extend .btn-shadow;
+
+  color: $secondary;
+  background: $bg-secondary;
+  border: 1px solid $secondary;
+}
+
+.btn-primary-student {
+  @extend .btn-primary;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}

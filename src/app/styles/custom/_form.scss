@@ -1,0 +1,83 @@
+input[type="radio"],
+input[type="checkbox"] {
+  width: 20px !important;
+  accent-color: $secondary !important;
+}
+
+.form-control {
+  @apply w-full h-12 py-1 px-6 block rounded-full;
+  color: $text;
+
+  &::placeholder {
+    @apply text-gray-700;
+    opacity: 0.85;
+  }
+}
+
+.form-group {
+  @apply w-auto mb-7;
+
+  > label {
+    color: $primary;
+    @apply block mb-1 font-bold;
+  }
+
+  > input,
+  > select,
+  > textarea {
+    @extend .form-control;
+    background: $white;
+    border: 1px solid $black;
+
+    &:focus {
+      @apply outline-none;
+    }
+  }
+
+  > textarea {
+    @apply h-auto rounded-2xl;
+  }
+
+  > span {
+    @apply text-sm absolute mt-1 text-red-500;
+  }
+}
+
+.input-group {
+  @apply flex justify-between p-0;
+  @extend .form-control;
+
+  > input {
+    @apply w-full rounded-r-none border-0 h-full;
+    @extend .form-control;
+
+    &:focus {
+      @apply outline-none;
+    }
+  }
+
+  :last-child {
+    @apply w-1/5;
+  }
+}
+
+.inline-form-group {
+  @extend .form-group;
+  @apply flex items-center;
+}
+
+// #region: student
+.form-control-student {
+  border-radius: 1rem !important;
+}
+
+.form-group-student {
+  @extend .form-group;
+
+  > input,
+  > select,
+  > textarea {
+    @extend .form-control-student;
+  }
+}
+// #endregion: student

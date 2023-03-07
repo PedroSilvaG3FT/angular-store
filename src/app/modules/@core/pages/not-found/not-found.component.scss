@@ -1,0 +1,15 @@
+@import "base";
+
+#not-found {
+  @apply h-screen w-full flex flex-col items-center justify-center;
+
+  > h1 {
+    @apply text-xl;
+    color: $secondary;
+  }
+
+  > button {
+    @apply mt-4;
+    @extend .btn-secondary;
+  }
+}

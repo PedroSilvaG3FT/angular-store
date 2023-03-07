@@ -1,0 +1,64 @@
+@import "variables";
+
+.table-primary {
+  @apply table-auto w-full;
+  border-collapse: collapse;
+}
+
+.head-col {
+  position: sticky !important;
+  background: $bg-primary;
+}
+
+.head-row {
+  position: sticky !important;
+  background: $bg-secondary;
+}
+
+.padding-x {
+  &:first-of-type {
+    @apply pl-4;
+  }
+
+  &:last-of-type {
+    @apply pr-4;
+  }
+}
+
+#table-head {
+  color: $black;
+  background: $bg-primary;
+
+  > th {
+    @apply py-3 text-left;
+    @extend .padding-x;
+  }
+}
+
+#table-body {
+  color: $black;
+
+  > td {
+    @extend .padding-x;
+    @apply py-3 text-left;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &:last-of-type > td {
+    @apply border-none;
+  }
+}
+
+#center-col {
+  text-align: -webkit-center !important;
+}
+#action-col {
+  > button {
+    color: $primary;
+    @apply text-[1.4rem] ml-4;
+
+    &:first-of-type {
+      @apply ml-0;
+    }
+  }
+}

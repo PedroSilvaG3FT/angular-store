@@ -1,0 +1,9 @@
+@import "variables";
+
+body .toast {
+  border-radius: 0.75rem !important;
+
+  &--success {
+    background: $green !important;
+  }
+}

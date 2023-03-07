@@ -1,0 +1,19 @@
+.scrollbar-primary {
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-full;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar {
+    @apply w-2.5 sm:w-1;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: darken($bg-primary, 8);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+  }
+}

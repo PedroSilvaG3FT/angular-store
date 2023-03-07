@@ -1,0 +1,33 @@
+$red: #f44336;
+$text: #5b5a5a;
+$pink: #ff0097;
+$gray: #ececec;
+$green: #92c020;
+$white: #ffffff;
+$black: #000000;
+$purple: #9747ff;
+$yellow: #f9be00;
+$orange: #f18700;
+$primary: #22317f;
+$secondary: #e8308a;
+$gray-dark: #333333;
+$backdrop: #12100bb3;
+$gray-light: #d9d9d9;
+$bg-primary: #f9f9f9;
+$purple-dark: #6100ff;
+$purple-light: #765ef4;
+$bg-secondary: #ffffff;
+$primary-light: #5bc5f2;
+$secondary-light: #f2c2cd;
+$primary-student: #784e9a;
+$secondary-opacity: #d32c7d;
+$bg-primary-student: #eaeaea;
+
+$header-height: 80px;
+$content-height: 100vh;
+$border-black: 2px solid $black;
+$screen-backdrop-size: calc(100vw + 100vh + 100px);
+$shadow-screen-backdrop: 0px 0px 0px $screen-backdrop-size $backdrop;
+$shadow-secondary-light: 25px 25px $secondary-light, 25px 25px 0px 2px $black;
+
+$gradient-secondary: linear-gradient(180deg, #{$secondary} 20%, #da5495 60%);
