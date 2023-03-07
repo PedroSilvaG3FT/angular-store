@@ -9,11 +9,5 @@ import { LoadingService } from '../../services/loading.service';
 export class LoginComponent implements OnInit {
   constructor(private loadingService: LoadingService) {}
 
-  ngOnInit() {
-    this.loadingService.show('TESTE');
-
-    setTimeout(() => {
-      this.loadingService.hide();
-    }, 5000);
-  }
+  ngOnInit() {}
 }

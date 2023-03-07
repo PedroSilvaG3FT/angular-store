@@ -5,8 +5,8 @@ input[type="checkbox"] {
 }
 
 .form-control {
-  @apply w-full h-12 py-1 px-6 block rounded-full;
-  color: $text;
+  @apply w-full h-12 py-1 px-4 block rounded-xl;
+  color: $bg-primary;
 
   &::placeholder {
     @apply text-gray-700;
@@ -18,8 +18,8 @@ input[type="checkbox"] {
   @apply w-auto mb-7;
 
   > label {
-    color: $primary;
-    @apply block mb-1 font-bold;
+    color: $text;
+    @apply block mb-1;
   }
 
   > input,
@@ -27,7 +27,6 @@ input[type="checkbox"] {
   > textarea {
     @extend .form-control;
     background: $white;
-    border: 1px solid $black;
 
     &:focus {
       @apply outline-none;

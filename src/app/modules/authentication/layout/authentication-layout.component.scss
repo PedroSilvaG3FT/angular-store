@@ -5,13 +5,15 @@
   @apply min-w-full min-h-screen flex items-center justify-center;
 
   > article {
-    @apply w-2/5 p-8 rounded-2xl shadow-md flex flex-col items-center;
-    @apply sm:w-full;
+    @apply w-2/5 p-8 rounded-2xl shadow-md flex flex-col items-center sm:w-full;
+    background: $bg-secondary;
 
     > img {
       @apply w-36 h-36;
     }
 
-    background: $bg-secondary;
+    > main {
+      @apply w-full;
+    }
   }
 }

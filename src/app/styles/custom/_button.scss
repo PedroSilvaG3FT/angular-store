@@ -5,6 +5,7 @@
 .btn {
   @apply h-auto min-w-[110px] rounded-full;
   padding: 0.4rem 0.8rem !important;
+  color: $text;
 
   &:disabled {
     @apply opacity-80 cursor-not-allowed;
@@ -14,38 +15,17 @@
 .btn-primary {
   @extend .btn;
   @extend .btn-shadow;
-
-  color: $bg-primary;
-  background: $secondary;
+  background: $primary;
 }
 
 .btn-secondary {
   @extend .btn;
   @extend .btn-shadow;
-
-  color: $bg-primary;
-  background: $primary;
+  background: $secondary;
 }
 
-.btn-light {
+.btn-tertiary {
   @extend .btn;
   @extend .btn-shadow;
-
-  color: $primary;
-  background: $bg-secondary;
-}
-
-.btn-light-secondary {
-  @extend .btn;
-  @extend .btn-shadow;
-
-  color: $secondary;
-  background: $bg-secondary;
-  border: 1px solid $secondary;
-}
-
-.btn-primary-student {
-  @extend .btn-primary;
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
+  background: $tertiary;
 }
