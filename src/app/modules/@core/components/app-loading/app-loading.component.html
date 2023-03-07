@@ -1,0 +1,8 @@
+<section id="app-loading">
+  <article *ngIf="content; else defaultContent" [innerHtml]="content"></article>
+
+  <ng-template #defaultContent>
+    <img src="/assets/images/logo.png" />
+    <span *ngIf="message">{{ message }}</span>
+  </ng-template>
+</section>

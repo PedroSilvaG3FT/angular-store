@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'login',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  constructor(private loadingService: LoadingService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loadingService.show('TESTE');
+
+    setTimeout(() => {
+      this.loadingService.hide();
+    }, 5000);
+  }
 }
