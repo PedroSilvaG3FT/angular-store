@@ -6,28 +6,17 @@
   }
 }
 
+.app-container-admin-wrapper,
+.app-container-customer-wrapper {
+  @apply min-h-full;
+}
+
 .app-container-admin {
   @apply px-20 py-10 min-h-[100%];
   @extend .app-container;
 }
 
-.app-container-admin-wrapper,
-.app-container-leader-wrapper,
-.app-container-human-resources-wrapper {
-  @apply min-h-full;
-}
-
-.app-container-student {
+.app-container-customer {
   @extend .app-container;
   @apply px-0 pt-[3.85rem] pb-6 sm:pt-10;
-}
-
-.app-container-leader {
-  @extend .app-container;
-  @apply px-4 pb-6;
-}
-
-.app-container-human-resources {
-  @apply px-8 py-4 min-h-[88.6%];
-  @extend .app-container;
 }
