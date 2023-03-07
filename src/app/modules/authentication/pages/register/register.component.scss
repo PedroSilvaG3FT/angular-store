@@ -1,0 +1,15 @@
+@import "base";
+
+#register {
+  @apply w-full flex flex-col items-center;
+
+  > div {
+    @apply w-full;
+    @extend .form-group;
+  }
+
+  > button {
+    @apply mb-4;
+    @extend .btn-primary;
+  }
+}
