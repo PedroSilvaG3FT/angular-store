@@ -1,7 +1,13 @@
 <form id="register" #registerForm="ngForm" (ngSubmit)="handleSubmit()">
   <div>
     <label for="name">Nome</label>
-    <input required type="text" id="name" name="name" [(ngModel)]="user.name" />
+    <input
+      required
+      id="name"
+      type="text"
+      name="name"
+      [(ngModel)]="user.displayName"
+    />
   </div>
 
   <div>

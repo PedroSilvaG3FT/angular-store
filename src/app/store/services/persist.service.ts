@@ -13,7 +13,7 @@ export class PersistService {
   ) {}
 
   private get moduleKey(): string {
-    return `@TESS_A4:${this.name}`;
+    return `@ANGULAR_TEMPLATE:${this.name}`;
   }
 
   private get storage() {

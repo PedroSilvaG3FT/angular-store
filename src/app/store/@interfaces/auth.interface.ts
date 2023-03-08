@@ -1,4 +1,6 @@
+import { IUser } from '@/modules/@core/interfaces/user.interface';
+
 export interface IAuthInitialState {
-  user: object;
+  user: IUser;
   token: string;
 }

@@ -1,4 +1,3 @@
-import { SEOService } from './seo.service';
-import { LoadingService } from './loading.service';
+import { AuthenticationService } from './authentication.service';
 
-export default [SEOService, LoadingService];
+export default [AuthenticationService];

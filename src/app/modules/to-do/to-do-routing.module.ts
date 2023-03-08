@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminLayoutComponent } from './layout/admin-layout.component';
+import { BoardsComponent } from './pages/boards/boards.component';
+import { ToDoLayoutComponent } from './layout/to-do-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AdminLayoutComponent,
+    component: ToDoLayoutComponent,
     children: [
       {
-        path: 'login', // component: LoginComponent,
+        path: '',
+        component: BoardsComponent,
       },
     ],
   },
@@ -18,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AdminRoutingModule {}
+export class ToDoRoutingModule {}

@@ -1,9 +1,14 @@
-import { UserType } from '../enums/user.enum';
-
-export interface IUserRegister {
-  uid: string;
-  name: string;
+export interface IUser {
+  uid?: string;
   email: string;
-  rule: UserType;
+  photoURL: string;
+  displayName: string;
+  emailVerified: boolean;
+}
+
+export interface IUserAuthentication {
+  email: string;
   password: string;
 }
+
+export interface IUserRegister extends IUser, IUserAuthentication {}

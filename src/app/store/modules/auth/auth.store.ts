@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { PersistService } from '@/store/services/persist.service';
 import { decodeJWT } from '@/modules/@core/functions/jwt.function';
 import { IAuthInitialState } from '@/store/@interfaces/auth.interface';
+import { IUser } from '@/modules/@core/interfaces/user.interface';
 
 @Injectable()
 export class AuthStore extends PersistService {
@@ -20,7 +21,7 @@ export class AuthStore extends PersistService {
     return decodeJWT(this.state?.token);
   }
 
-  public setUser(user: object) {
+  public setUser(user: IUser) {
     const state = this.state;
 
     state.user = user;
@@ -37,8 +38,9 @@ export class AuthStore extends PersistService {
   public logout() {
     const state = this.state;
 
-    state.user = {};
     state.token = '';
+    state.user = {} as IUser;
+
     this.commit(state);
   }
 }

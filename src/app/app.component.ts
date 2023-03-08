@@ -1,7 +1,7 @@
 import Iconify from '@iconify/iconify';
 import { Component } from '@angular/core';
 import { LoadingStore } from './store/modules/loading/loading.store';
-import { SEOService } from './modules/authentication/services/seo.service';
+import { SEOService } from './modules/@core/services/seo.service';
 
 @Component({
   selector: 'app-root',

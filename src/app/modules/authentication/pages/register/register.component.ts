@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingService } from '../../services/loading.service';
+import { UserType } from '@/modules/@core/enums/user.enum';
+import { UserService } from '@/modules/@core/services/user.service';
+import { LoadingService } from '../../../@core/services/loading.service';
 import { IUserRegister } from '@/modules/@core/interfaces/user.interface';
+import { LoginService } from '@/modules/@core/services/login.service';
 
 @Component({
   selector: 'register',
@@ -10,12 +13,25 @@ import { IUserRegister } from '@/modules/@core/interfaces/user.interface';
 export class RegisterComponent implements OnInit {
   public user: IUserRegister = {} as IUserRegister;
 
-  constructor(private loadingService: LoadingService) {}
+  constructor(
+    private userService: UserService,
+    private loginService: LoginService,
+    private loadingService: LoadingService
+  ) {}
 
   ngOnInit() {}
 
-  handleSubmit() {
+  async handleSubmit() {
     this.loadingService.show('Criando conta...');
-    setTimeout(() => this.loadingService.hide(), 3000);
+    try {
+      this.user.photoURL = '';
+      const response = await this.userService.create(this.user);
+      this.loginService;
+      console.log('DEU BOM', response);
+    } catch (error) {
+      console.log('ERROR', error);
+    } finally {
+      this.loadingService.hide();
+    }
   }
 }

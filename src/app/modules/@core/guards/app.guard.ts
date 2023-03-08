@@ -10,7 +10,7 @@ import {
 } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
-export class AuthenticationGuard implements CanActivateChild {
+export class AppGuard implements CanActivateChild {
   constructor(
     private authStore: AuthStore,
     private routeService: RouteService
@@ -24,11 +24,11 @@ export class AuthenticationGuard implements CanActivateChild {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (!this.authStore.state.token) {
+    if (!!this.authStore.state.token) {
       return true;
     }
 
-    this.routeService.goToHome();
+    this.routeService.goToLogin();
     return false;
   }
 }

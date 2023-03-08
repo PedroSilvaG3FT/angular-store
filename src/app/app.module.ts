@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import providers from './modules/@core/providers';
 
 import { AppStoreModule } from './store/store.module';
-import { environment } from 'environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './modules/@core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,12 +10,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ToastService, AngularToastifyModule } from 'angular-toastify';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { provideAuth, getAuth } from '@angular/fire/auth';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
-  providers: [ToastService],
+  providers: [ToastService, providers.fireBase],
   bootstrap: [AppComponent],
   declarations: [AppComponent],
   imports: [
@@ -26,9 +28,12 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     AngularToastifyModule,
     BrowserAnimationsModule,
 
-    provideStorage(() => getStorage()),
+    provideFirebaseApp(() => initializeApp(providers.fireBase.useValue)),
     provideFirestore(() => getFirestore()),
-    provideFirebaseApp(() => initializeApp(environment.firebase_config)),
+    provideFirestore(() => getFirestore()),
+    provideDatabase(() => getDatabase()),
+    provideStorage(() => getStorage()),
+    provideAuth(() => getAuth()),
   ],
 })
 export class AppModule {}
