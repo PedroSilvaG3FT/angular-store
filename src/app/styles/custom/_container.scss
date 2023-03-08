@@ -6,17 +6,11 @@
   }
 }
 
-.app-container-admin-wrapper,
-.app-container-customer-wrapper {
+.app-container-to-do-wrapper {
   @apply min-h-full;
 }
 
-.app-container-admin {
-  @apply px-20 py-10 min-h-[100%];
+.app-container-to-do {
   @extend .app-container;
-}
-
-.app-container-customer {
-  @extend .app-container;
-  @apply px-0 pt-[3.85rem] pb-6 sm:pt-10;
+  @apply pt-[3.85rem] pb-6 sm:pt-10;
 }

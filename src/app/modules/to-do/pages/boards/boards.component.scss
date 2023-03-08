@@ -1,4 +1,9 @@
 @import "base";
 
 #boards {
+  @extend .app-container-to-do-wrapper;
+
+  > section {
+    @extend .app-container-to-do;
+  }
 }
