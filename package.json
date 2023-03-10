@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start-pwa": "ng build --prod && http-server -p 8080 -c-1 dist/angular-pwa"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/platform-browser": "^15.2.2",
     "@angular/platform-browser-dynamic": "^15.2.2",
     "@angular/router": "^15.2.2",
+    "@angular/service-worker": "^15.2.2",
     "@iconify/iconify": "^3.1.0",
     "angular-toastify": "^1.0.4",
     "animate.css": "^4.1.1",
